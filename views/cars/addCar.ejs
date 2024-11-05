@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/global.css" />
+		<title>Add a new Car</title>
+	</head>
+	<body>
+		<h1>Add a New Car!</h1>
+		<a href="/cars/">Back to Cars</a>
+		<form action="/cars" method="POST">
+			<div>
+				<label for="type">Type</label>
+				<select name="type" id="type" required>
+					<option value="" disabled selected>Select a type</option>
+					<option value="SUV">SUV</option>
+					<option value="SEDAN">Sedan</option>
+					<option value="TRUCK">Truck</option>
+					<option value="SPORT">Sport</option>
+				</select>
+			</div>
+			<div>
+				<label for="brand">Brand</label>
+				<input
+					type="text"
+					name="brand"
+					id="brand"
+					required
+					placeholder="Car Brand"
+				/>
+			</div>
+			<div>
+				<label for="color">Car Color</label>
+				<input
+					type="text"
+					name="color"
+					id="color"
+					required
+					placeholder="Please select a color"
+				/>
+			</div>
+			<div>
+        <label for="year">Car Model</label>
+        <select name="year" id="year" required></select>
+          <option value="" disabled selected>Select a year</option>
+          <% for (let year = 2000; year <= 2024; year++) { %>
+            <option value="<%= year %>"><%= year %></option>
+          <% } %>
+        </select>
+			</div>
+			<button type="submit">Add Car</button>
+		</form>
+	</body>
+</html>
