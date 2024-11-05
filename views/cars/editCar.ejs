@@ -9,7 +9,7 @@
 	<body>
 		<h1>Edit <%= car.model %></h1>
 		<form action="/cars/<%= car._id %>/?_method=PUT" method="POST">
-			<div>
+			<div id="type-select">
 				<label for="type">Type</label>
 				<select name="type" id="type" required>
 					<option value="<%= car.type %>" disabled selected>
@@ -21,7 +21,7 @@
 					<option value="SPORT">Sport</option>
 				</select>
 			</div>
-			<div>
+			<div id="brand-input">
 				<label for="brand">Brand</label>
 				<input
 					type="text"
@@ -31,7 +31,7 @@
 					placeholder="Car Brand"
 				/>
 			</div>
-			<div>
+			<div id="model-input">
 				<label for="Model">Model</label>
 				<input
 					type="text"
@@ -41,7 +41,7 @@
 					placeholder="Car Model"
 				/>
 			</div>
-			<div>
+			<div id="color-input">
 				<label for="color">Car Color</label>
 				<input
 					type="text"
@@ -51,7 +51,7 @@
 					placeholder="Please select a color"
 				/>
 			</div>
-			<div>
+			<div id="year-select">
 				<label for="year">Year</label>
 				<select name="year" id="year" required>
 					<option value="<%= car.year %>" disabled selected>
@@ -62,6 +62,7 @@
 					<% } %>
 				</select>
 			</div>
+			<button type="submit">Update</button>
 		</form>
 	</body>
 </html>
