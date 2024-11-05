@@ -31,10 +31,10 @@ const update = async (req, res) => {
 	res.redirect(`/cars/${id}`)
 }
 
-const deleteCar = async (res, req) => {
+const deleteCar = async (req, res) => {
 	const id = req.params.id
 	await Cars.findByIdAndDelete(id)
-	res.redirect
+	res.redirect('/cars/')
 }
 
 module.exports = {
