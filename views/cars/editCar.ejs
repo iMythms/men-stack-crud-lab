@@ -32,6 +32,16 @@
 				/>
 			</div>
 			<div>
+				<label for="Model">Model</label>
+				<input
+					type="text"
+					name="model"
+					id="model"
+					required
+					placeholder="Car Model"
+				/>
+			</div>
+			<div>
 				<label for="color">Car Color</label>
 				<input
 					type="text"
@@ -41,15 +51,17 @@
 					placeholder="Please select a color"
 				/>
 			</div>
-      <div>
-        <label for="year">Car Model</label>
-        <select name="year" id="year" required></select>
-          <option value="<%= car.year %>" disabled selected><%= car.year %></option>
-          <% for (let year = 2000; year <= 2024; year++) { %>
-            <option value="<%= year %>"><%= year %></option>
-          <% } %>
-        </select>
-      </div>
+			<div>
+				<label for="year">Year</label>
+				<select name="year" id="year" required>
+					<option value="<%= car.year %>" disabled selected>
+						<%= car.year %>
+					</option>
+					<% for (let year = 2000; year <= 2024; year++) { %>
+					<option value="<%= year %>"><%= year %></option>
+					<% } %>
+				</select>
+			</div>
 		</form>
 	</body>
 </html>

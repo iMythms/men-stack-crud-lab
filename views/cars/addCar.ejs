@@ -8,9 +8,9 @@
 	</head>
 	<body>
 		<h1>Add a New Car!</h1>
-		<a href="/cars/">Back to Cars</a>
+		<a href="/cars/"> < Back to Cars</a>
 		<form action="/cars" method="POST">
-			<div>
+			<div id="type-select">
 				<label for="type">Type</label>
 				<select name="type" id="type" required>
 					<option value="" disabled selected>Select a type</option>
@@ -20,7 +20,7 @@
 					<option value="SPORT">Sport</option>
 				</select>
 			</div>
-			<div>
+			<div id="brand-input">
 				<label for="brand">Brand</label>
 				<input
 					type="text"
@@ -30,7 +30,17 @@
 					placeholder="Car Brand"
 				/>
 			</div>
-			<div>
+			<div id="model-input">
+				<label for="Model">Model</label>
+				<input
+					type="text"
+					name="model"
+					id="model"
+					required
+					placeholder="Car Model"
+				/>
+			</div>
+			<div id="color-input">
 				<label for="color">Car Color</label>
 				<input
 					type="text"
@@ -40,14 +50,14 @@
 					placeholder="Please select a color"
 				/>
 			</div>
-			<div>
-        <label for="year">Car Model</label>
-        <select name="year" id="year" required></select>
-          <option value="" disabled selected>Select a year</option>
-          <% for (let year = 2000; year <= 2024; year++) { %>
-            <option value="<%= year %>"><%= year %></option>
-          <% } %>
-        </select>
+			<div id="year-select">
+				<label for="year">Year</label>
+				<select name="year" id="year" required>
+					<option value="" disabled selected>Select a year</option>
+					<% for (let year = 2000; year <= 2024; year++) { %>
+					<option value="<%= year %>"><%= year %></option>
+					<% } %>
+				</select>
 			</div>
 			<button type="submit">Add Car</button>
 		</form>

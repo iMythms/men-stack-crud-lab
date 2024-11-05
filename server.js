@@ -2,6 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 const methodOverride = require('method-override')
+const carRoute = require('./routes/cars')
 const morgan = require('morgan')
 
 const app = express()

@@ -4,15 +4,15 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="/global.css" />
-		<title><%= car.brand %></title>
+		<title><%= car.model %></title>
 	</head>
 	<body>
-		<h1>Car brand is <%= car.brand %></h1>
+		<h1>Car Model is <%= car.model %></h1>
 		<p>Car color is <%= car.color %></p>
 		<p>Made in the year <%= car.year %></p>
 
 		<form action="/cars/<%=car._id%>?_method=DELETE" method="POST">
-			<button type="submit">Delete <%= car.brand %></button>
+			<button type="submit">Delete <%= car.model %></button>
 		</form>
 		<a href="/cars/<%= car._id %>/editCar">Edit a Car</a>
 		<a href="/cars/">Back to Cars</a>
